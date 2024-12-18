@@ -38,7 +38,7 @@ while True:
 
     h, w = frame.shape[:2]  # забираем высоту и ширину кадра
     blob = cv2.dnn.blobFromImage(cv2.resize(frame, (224, 224)), 0.007843, (224, 224), 127.5)
-    # получили блоб, что делают цифири - хз
+
 
     net.setInput(blob)
     detections = net.forward()
